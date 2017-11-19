@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: elastic-test
+
+#日志输出
+logging:
+#  config: logback.xml
+  file: /home/wwwlogs/elastic-test.log
+  level:
+    org.springframework.web: DEBUG
+    com.joyowo: DEBUG
+
+mybatis:
+    type-aliases-package: com.pudge.elastic.mapper
+    mapper-locations: classpath:mapper/*.xml
+
+mapper:
+    mappers:
+        - com.pudge.elastic.util.MyMapper
+    not-empty: false
+    identity: MYSQL
+
+druid:
+   maxIdle: 20
+   maxActive: 20
+   initialSize: 1
+   maxWait: 60000
+   minIdle: 1
+   timeBetweenEvictionRunsMillis: 60000
+   minEvictableIdleTimeMillis: 300000
+   validationQuery: select 'x'
+   testWhileIdle: true
+   testOnBorrow: false
+   testOnReturn: false
+   poolPreparedStatements: true
+   maxOpenPreparedStatements: 20

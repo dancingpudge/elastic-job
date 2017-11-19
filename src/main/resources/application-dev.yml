@@ -1,0 +1,13 @@
+regCenter:
+  serverList: 127.0.0.1:2181
+  namespace: elastic-finance-job-dev
+
+testJob:
+  cron: 0 0/20 * * * ?
+  shardingTotalCount: 3
+  shardingItemParameters: 0=testJob
+
+druid:
+   url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+   username:
+   password:
