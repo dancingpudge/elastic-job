@@ -4,8 +4,7 @@ import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
 import com.pudge.elastic.service.TestService;
 import lombok.extern.slf4j.Slf4j;
-
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 天吴客户社保款预请款总表 （待核销）
@@ -16,8 +15,12 @@ import javax.annotation.Resource;
 @Slf4j
 public class TestJob implements SimpleJob {
 
-    @Resource
-    TestService testService;
+    private final TestService testService;
+
+    @Autowired
+    public TestJob(TestService testService) {
+        this.testService = testService;
+    }
 
     @Override
     public void execute(ShardingContext shardingContext) {
