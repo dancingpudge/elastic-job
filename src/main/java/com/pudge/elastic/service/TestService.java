@@ -1,14 +1,18 @@
 package com.pudge.elastic.service;
 
-import lombok.extern.slf4j.Slf4j;
+import com.pudge.elastic.mapper.CsGoodsMapper;
+import com.pudge.elastic.model.CsGoods;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
  * @author Liuh
  */
-@Slf4j
 @Service("testService")
 public class TestService {
+    @Autowired
+    CsGoodsMapper goodsMapper;
     public void dealBusiness() {
+        goodsMapper.insert(new CsGoods());
     }
 }
