@@ -11,8 +11,9 @@ import org.springframework.stereotype.Service;
 @Service("testService")
 public class TestService {
     @Autowired
-    CsGoodsMapper goodsMapper;
+    CsGoodsMapper csGoodsMapper;
+
     public void dealBusiness() {
-        goodsMapper.insert(new CsGoods());
+        csGoodsMapper.insert(new CsGoods());
     }
 }
