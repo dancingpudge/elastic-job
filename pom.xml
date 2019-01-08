@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.joyowo</groupId>
-    <artifactId>elasticjob-test</artifactId>
+    <groupId>com.pudge</groupId>
+    <artifactId>elastic-job</artifactId>
     <version>1.0.0</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
@@ -200,7 +200,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.4.3</version>
                 <configuration>
-                    <imageName>joyowo/${project.artifactId}</imageName>
+                    <imageName>pudge/${project.artifactId}</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>

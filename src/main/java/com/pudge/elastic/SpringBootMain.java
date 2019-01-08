@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan(basePackages = "com.joyowo.elastic.mapper", markerInterface = MyMapper.class)
+@MapperScan(basePackages = "com.pudge.elastic.mapper", markerInterface = MyMapper.class)
 public class SpringBootMain {
 
     public static void main(final String[] args) {
